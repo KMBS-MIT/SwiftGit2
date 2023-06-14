@@ -1,5 +1,7 @@
+.DS_Store
 .vscode/
 .build/
+.swiftpm/
 
 # Xcode
 #
@@ -22,24 +24,18 @@ DerivedData
 *.xcscmblueprint
 *.idea*
 
-External/libgit2*.a
-External/ios-openssl
-External/libgit2-ios
-External/libssh2-ios
+scripts/install/
+scripts/build/
+scripts/pcre*/
+scripts/openssl*/
+scripts/openssl*.tar.gz
+scripts/libssh2*/
+scripts/libssh2*.tar.gz
+scripts/v*.zip
+scripts/libgit2*/
+scripts/Clibgit2/
+scripts/Clibgit2.xcframework/
+scripts/Clibgit2.xcframework.zip
+scripts/libgit2.xcframework.zip
+scripts/Temp/
 
-### fastlane ###
-# fastlane - A streamlined workflow tool for Cocoa deployment
-
-# fastlane specific
-fastlane/report.xml
-
-# deliver temporary files
-fastlane/Preview.html
-
-# snapshot generated screenshots
-fastlane/screenshots/**/*.png
-fastlane/screenshots/screenshots.html
-
-# scan temporary files
-fastlane/test_output
-test_output

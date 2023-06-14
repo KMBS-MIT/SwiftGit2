@@ -65,8 +65,7 @@ opt_in_rules:
   - yoda_condition
 
 excluded:
-  - Carthage
-  - External
+  - scripts
 
 line_length:
   ignores_function_declarations: true

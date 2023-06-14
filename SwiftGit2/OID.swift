@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
+import Foundation
 import Clibgit2
 
 /// An identifier for a Git object.
@@ -50,8 +51,7 @@ extension OID: CustomStringConvertible {
 		let string = UnsafeMutablePointer<Int8>.allocate(capacity: length)
 		var oid = self.oid
 		git_oid_fmt(string, &oid)
-
-		return String(bytesNoCopy: string, length: length, encoding: .ascii, freeWhenDone: true)!
+    return String(data: Data(bytesNoCopy: string, count: length, deallocator: .free), encoding: .ascii)!
 	}
 }
 

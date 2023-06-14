@@ -32,7 +32,7 @@ public struct Diff {
 	public var deltas = [Delta]()
 
 	public struct Delta {
-		public static let type = GIT_OBJ_REF_DELTA
+    public static let type = Clibgit2.GIT_OBJECT_REF_DELTA
 
 		public var status: Status
 		public var flags: Flags
@@ -57,7 +57,7 @@ public struct Diff {
 			self.oid = OID(diffFile.id)
 			let path = diffFile.path
 			self.path = path.map(String.init(cString:))!
-			self.size = diffFile.size
+      self.size = Int64(diffFile.size)
 			self.flags = Flags(rawValue: diffFile.flags)
 		}
 	}
